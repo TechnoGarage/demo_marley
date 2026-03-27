@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
 
 :root {
-    --bg-primary: #FFFDF5; /* Cream shell */
-    --bg-soft: #F9F7F0;
-    --text-main: #4A4A4A; /* Smoke Grey */
-    --text-light: #7F7F7F;
-    --accent: #D7C0AE; /* Golden Smoke */
-    --accent-dark: #A68A73;
+    --bg-primary: rgba(255, 253, 245, 0.95); /* Semi-transparent cream */
+    --bg-soft: rgba(249, 247, 240, 0.8);
+    --text-main: #333333;
+    --text-light: #555555;
+    --accent: #E5D1B8;
+    --accent-dark: #8C7355;
     --white: #ffffff;
     --spacing-lg: 120px;
     --spacing-md: 60px;
@@ -20,7 +20,8 @@
 }
 
 body {
-    background-color: var(--bg-primary);
+    background: url('assets/images/gallery/tunnel luce.png') no-repeat center center fixed;
+    background-size: cover;
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     line-height: 1.8;
@@ -28,15 +29,13 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .serif {
-    font-family: 'Lora', serif;
-    font-weight: 400;
-}
-
 section {
+    background-color: var(--bg-primary);
     padding: var(--spacing-lg) 10%;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 8px;
 }
 
 .container-narrow {
@@ -51,41 +50,40 @@ section {
 .mb-md { margin-bottom: 2rem; }
 .italic { font-style: italic; }
 
-/* Hero Section - Minimalist */
+/* Hero Section - Redesigned */
 .hero {
-    height: 90vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    position: relative;
-    padding: 0;
-    background-color: var(--bg-soft);
+    padding: 40px 20px;
+    background: none;
 }
 
 .hero-img-container {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
+    max-width: 900px;
+    height: 60vh;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
 }
 
 .hero-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(20%) contrast(90%);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    background: rgba(255, 253, 245, 0.9);
-    padding: 3rem 5rem;
-    border-radius: 2px;
+    background: var(--bg-primary);
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: block;
 }
 
 .hero h1 {
@@ -226,8 +224,25 @@ section {
 
 /* Virtual Candle */
 .candle-section {
-    background-color: var(--bg-soft);
+    background-color: var(--bg-primary);
     text-align: center;
+}
+
+/* Epitaph */
+.epitaph {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.epitaph-content {
+    background: rgba(255, 253, 245, 0.8);
+    padding: 4rem;
+    border-radius: 100px 100px 0 0;
+    border-top: 1px solid var(--accent);
 }
 
 .candle-container {
