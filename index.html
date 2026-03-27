@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Memoria di Marley - Un Cuore d'Oro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background-image: url('assets/images/gallery/coverlg.jpg');">
+        <div class="hero-content">
+            <h1>Marley</h1>
+            <p>"Un cane non se ne fa niente di macchine costose, case grandi o vestiti firmati... Un bastone marcio è sufficiente."</p>
+        </div>
+    </header>
+
+    <!-- Story Section -->
+    <section class="story">
+        <h2>La Nostra Storia</h2>
+        <div class="story-content clearfix">
+            <p>Marley non è stato solo un cane; è stato il <span class="highlight">battito cardiaco</span> della nostra casa. Arrivato come un piccolo batuffolo di pelo giallo, ha subito messo in chiaro che la sua energia sarebbe stata incontenibile.</p>
+            
+            <img src="assets/images/gallery/c_marleyandmepic14.jpg" alt="Marley cucciolo" class="story-img right">
+
+            <p>Proprio come nel celebre racconto, Marley era un uragano di vivacità. Ha masticato mobili, ha travolto ospiti con il suo entusiasmo e ha fallito ogni tentativo di addestramento con una dignità quasi comica. Ma in ogni suo disastro c'era una purezza che ci ha insegnato più di quanto qualsiasi libro avrebbe potuto fare.</p>
+            
+            <img src="assets/images/gallery/iomarley_1.jpg" alt="Marley gioca" class="story-img left">
+
+            <p>Attraverso i momenti di gioia, le sfide della crescita e i cambiamenti della nostra famiglia, lui era lì. Una presenza costante, <span class="highlight">leale e incrollabile</span>. Ci ha visto ridere, ci ha visto piangere, e ha sempre saputo esattamente quando avevamo bisogno di una spinta col muso o di una coda che sbatteva forte contro il pavimento.</p>
+            
+            <p>Marley ci ha insegnato che l'amore non ha bisogno di parole, che la felicità si trova nelle cose più semplici e che, alla fine, ciò che conta davvero è chi hai accanto nel viaggio della vita.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 2.5rem; color: var(--accent);">Momenti Preziosi</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/images/gallery/0,,16004841-FMM,00.jpg" alt="Marley">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/1613476243-io-e-marley.jpg" alt="Marley e la famiglia">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/c_marleyandmepic14.jpg" alt="Marley cucciolo">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/iomarley_1.jpg" alt="Marley gioca">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/marley-aniston-hund-DW-Kultur-Berlin-jpg.jpg" alt="Marley al mare">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/owen-wilson-in-una-scena-del-film-io-marley-100516_jpg_375x0_crop_q85.jpg" alt="Marley e John">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/pad.mymovies.jpg" alt="Marley ritratto">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/images.jpg" alt="Marley nel prato">
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section class="legacy">
+        <blockquote>
+            "Un cane ti insegna l'amore incondizionato. Se puoi avere quello nella vita, le cose non saranno poi così male."
+        </blockquote>
+        <p>Grazie per tutto, Marley. Sarai sempre il nostro "cane peggiore del mondo", e il migliore che potessimo mai desiderare.</p>
+    </section>
+
+    <footer class="footer">
+        <a href="https://technogarage.github.io/" class="back-link">← Torna al Portale Principale</a>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: var(--text-muted);">&copy; 2026 Oasi di Memoria - In Memoria di Marley</p>
+    </footer>
+
+    <script>
+        // Semplice effetto di apparizione allo scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = "0";
+            section.style.transform = "translateY(30px)";
+            section.style.transition = "all 0.8s ease-out";
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
