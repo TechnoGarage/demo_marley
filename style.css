@@ -31,11 +31,13 @@ body {
 
 section {
     background-color: var(--bg-primary);
-    padding: var(--spacing-lg) 10%;
-    max-width: 1000px;
-    margin: 40px auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border-radius: 8px;
+    padding: var(--spacing-md) 10%;
+    max-width: 800px; /* Standardize to match intro width */
+    margin: 60px auto;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08); /* Slightly stronger shadow for "riquadro" feel */
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
 }
 
 .container-narrow {
@@ -198,8 +200,8 @@ section {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusted for narrower section */
+    gap: 20px;
 }
 
 .gallery-item {
@@ -224,8 +226,10 @@ section {
 
 /* Virtual Candle */
 .candle-section {
-    background-color: var(--bg-primary);
+    background-color: transparent !important;
+    box-shadow: none !important;
     text-align: center;
+    max-width: 1000px; /* Keep candle section wider/fluid as requested */
 }
 
 /* Epitaph */
@@ -316,8 +320,8 @@ section {
 
 /* Legacy Section */
 .legacy {
-    border-top: 1px solid var(--accent);
-    margin-top: var(--spacing-lg);
+    border-top: none; /* Remove border to keep it a clean box */
+    margin-top: 60px;
 }
 
 .donation-box {
