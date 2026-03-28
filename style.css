@@ -222,10 +222,7 @@ section {
 
 /* Virtual Candle */
 .candle-section {
-    background-color: transparent !important;
-    box-shadow: none !important;
     text-align: center;
-    max-width: 1000px; /* Keep candle section wider/fluid as requested */
 }
 
 /* Epitaph */
